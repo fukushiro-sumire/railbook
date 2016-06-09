@@ -12,6 +12,10 @@ class BooksController < ApplicationController
   def show
   end
 
+  def view_helper_test
+  @color = 
+  end
+
   # GET /books/new
   def new
     @book = Book.new
