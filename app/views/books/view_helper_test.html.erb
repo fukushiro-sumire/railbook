@@ -1,11 +1,28 @@
-﻿<%= text_field :book, :isbn %>
-<%= number_field :book, :price %>
-<%= text_erea :book, :memo %>
-<%= check_box :book, :cd, {}, 0, 1%>
+﻿<h1>view_helper_test</h1>
+
+<br><%= text_field :book, :isbn %></br>
+
+<br><%= number_field :book, :price %></br>
+
+<br><%= text_area :book, :memo %></br>
+
+<br><%= check_box :book, :cd, {}, 0, 1%></br>
+</br>
 <%= radio_button :user, :color,"red" %>赤
+
 <%= radio_button :user, :color,"blue" %>青
-<%= radio_button :user, :color,"green" %>緑
-<%= select :user, :address, ["出雲市","松江市","雲南市"]%>
-<%= collection_select (:book, :publish, Publish.all, :id, publihname)%>
-<%= link_to 'Edit', edit_book_path %>
-<%= image_tag(hana.jpg) %>
+
+<%= radio_button :user, :color,"green" %>緑</br>
+
+<select id="book_publish" name="book[pubish]">
+ <option value="1">技術評論社</option>
+ <option value="2">翔泳社</option>
+ <option value="3">マイナビ</option>
+</select>
+
+<br><%= select :user, :address, ["出雲市","松江市","雲南市"]%></br>
+
+<br><%= link_to 'Back', books_path %></br>
+
+<br><%= image_tag'hana.jpg' %></br>
+
