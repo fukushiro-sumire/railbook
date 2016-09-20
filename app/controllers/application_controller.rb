@@ -21,4 +21,6 @@ def check_logined
  end
 end
 
+
+
 end

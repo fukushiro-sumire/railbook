@@ -1,4 +1,5 @@
 ﻿class LoginController < ApplicationController
+  layout false
   skip_before_action :check_logined
   def index
   end
@@ -8,7 +9,8 @@
    if usr then
      reset_session
      session[:usr] = usr.id
-     redirect_to params[:referer]
+     session[:username] = usr.username
+     redirect_to books_url
    else
      flash.now[:referer] = params[:referer]
      @error = 'ユーザーID/パスワードが間違っています。'
